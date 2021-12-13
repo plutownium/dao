@@ -1,7 +1,18 @@
 import Link from "next/link";
 import Header from "../components/Header";
 import VoteGrid from "../components/VoteGrid";
-function Vote() {
+
+import { getRandomSetOfN } from "../getFakeData/getFakeData";
+
+export async function getStaticProps() {
+  let fakeProps = getRandomSetOfN(6);
+  console.log(8, fakeProps.slice(0, 3));
+  return {
+    props: { companies: fakeProps },
+  };
+}
+const Vote = (props) => {
+  console.log(props, 15);
   return (
     <div>
       <Header />
@@ -29,11 +40,11 @@ function Vote() {
           <div className={"flex-grow"}></div>
         </div>
         <div className={"col-start-2 col-end-9"}>
-          <VoteGrid />
+          <VoteGrid companies={props.companies} />
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Vote;
