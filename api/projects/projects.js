@@ -93,7 +93,7 @@ router.put("/updateProject/addApplicant", async (req, res) => {
 });
 
 router.put("/updateProject/convertApplicantToMember", async (req, res) => {
-  // so someone who was previously an applicatn can be converted to a member status
+  // so someone who was previously an applicant can be converted to a member status
   let projectId = req.body.id;
   let promotionTarget = req.body.promotionTarget;
   let projectToUpdate = await db.Project.updateOne(

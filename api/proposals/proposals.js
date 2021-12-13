@@ -5,6 +5,7 @@ const db = require("../db");
 
 router.get("/proposals", (req, res) => {
   let startedAt = req.body.startedAt; // for pagination.
+
   db.Proposal.find({ createdOn: { $lte: startedAt } })
     .sortBy("-createdOn")
     .limit(20)
