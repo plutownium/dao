@@ -1,9 +1,17 @@
 import VoteCard from "./VoteCard.js";
 import VoteInfo from "./VoteInfo";
 
-const VoteGrid = () => {
-  let company1text = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu varius ex, in elementum urna. Curabitur sit amet metus fermentum enim interdum tempor eget non leo. Nunc felis nulla, interdum id cursus vitae, varius quis elit. Quisque cursus in sem eget eleifend. Donec accumsan scelerisque nunc, ut ornare eros. Pellentesque lacinia interdum tincidunt. In hac habitasse platea dictumst. Nulla ultrices hendrerit enim, a sagittis diam molestie sit amet. Maecenas ac faucibus ante. Maecenas in dictum arcu, vel dapibus augue. Mauris tristique porttitor lacus, sit amet mollis elit vehicula eu.
-Nunc blandit laoreet tincidunt. `;
+import { getRandomSetOfN } from "../getFakeData/getFakeData";
+
+export async function getStaticProps(context) {
+  let fakeProps = getRandomSetOfN(6);
+  console.log(8, fakeProps);
+  return {
+    props: { fakeProps }, // will be passed to the page component as props
+  };
+}
+
+const VoteGrid = ({ props }) => {
   let company1logo = "/img/square.jpg";
   return (
     <div
@@ -11,12 +19,20 @@ Nunc blandit laoreet tincidunt. `;
         "grid grid-cols-1 xl:grid-cols-4 m-4 mt-64 gap-8 h-screen justify-center animate__animated animate__fadeIn"
       }
     >
-      <VoteCard logo={company1logo} name="Square Inc." />
+      {props.map((card) => {
+        return (
+          <div>
+            <VoteInfo text={card.name} />
+            <VoteCard logo={company1logo} />
+          </div>
+        );
+      })}
+      {/* <VoteCard logo={company1logo} name="Square Inc." />
       <VoteInfo text={company1text} />
       <VoteCard logo={company1logo} name="Square Inc." />
       <VoteInfo text={company1text} />
       <VoteCard logo={company1logo} name="Square Inc." />
-      <VoteInfo text={company1text} />
+      <VoteInfo text={company1text} /> */}
     </div>
   );
 };
