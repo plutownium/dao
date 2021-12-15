@@ -4,8 +4,8 @@ import styles from "./Header.module.css";
 
 const Header = () => {
   return (
-    <div className="pt-5 flex justify-center">
-      <div className="w-1/2 flex justify-evenly">
+    <div className="pt-5 w-full flex justify-center">
+      <div className="w-full flex justify-evenly">
         <div className={styles.headerContainer}>
           <Link href="/explore">
             <a>Explore</a>
