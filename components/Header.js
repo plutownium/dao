@@ -1,16 +1,37 @@
+import Link from "next/link";
+
+import styles from "./Header.module.css";
+
 const Header = () => {
   return (
-    <div className={"grid grid-cols-6 p-4 fixed z-10 top-0 bg-black w-full"}>
-      <h1 className={"grid-span-2 p-4 text-lg font-bold"}>
-        Open Source Society
-      </h1>
-      <button
-        className={
-          "col-start-5 col-end-7 md:col-start-6 md:col-end-7 border-solid border-4 border-white rounded-xl p-4"
-        }
-      >
-        Connect Wallet
-      </button>
+    <div className="pt-5 flex justify-center">
+      <div className="w-1/2 flex justify-evenly">
+        <div className={styles.headerContainer}>
+          <Link href="/explore">
+            <a>Explore</a>
+          </Link>
+        </div>
+        <div className={styles.headerContainer}>
+          <Link href="/manage">
+            <a>Manage</a>
+          </Link>
+        </div>
+        <div className={styles.headerContainer}>
+          <Link href="/launch">
+            <a>Launch</a>
+          </Link>
+        </div>
+        <div className={styles.headerContainer}>
+          <Link href="/vote">
+            <a>Vote</a>
+          </Link>
+        </div>
+        <div className={styles.headerContainer}>
+          <Link href="/learn">
+            <a>Learn</a>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

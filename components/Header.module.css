@@ -1,0 +1,12 @@
+.headerContainer {
+  background-color: #e4d5ba;
+  width: 119px;
+}
+
+.headerContainer * {
+  color: #a59984;
+}
+
+.headerContainer::selection {
+  background-color: #bd4949;
+}

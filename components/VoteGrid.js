@@ -13,8 +13,8 @@ const VoteGrid = (props) => {
       {props.companies.map((card, index) => {
         return (
           <div key={index}>
-            <VoteInfo text={card.name} />
-            <VoteCard logo={company1logo} />
+            <VoteInfo text={card.description} />
+            <VoteCard name={card.name} logo={company1logo} />
           </div>
         );
       })}
