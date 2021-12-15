@@ -6,7 +6,8 @@ import Link from "next/link";
 
 export default function Wrapper({ children, page }) {
   return (
-    <div className={styles.container}>
+    // <div className={styles.container}>
+    <div>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -16,10 +17,10 @@ export default function Wrapper({ children, page }) {
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
+            "Sauce DAO"
           )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
         />
-        <meta name="og:title" content={siteTitle} />
+        <meta name="og:title" content={"Sauce DAO"} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <main>
@@ -29,7 +30,6 @@ export default function Wrapper({ children, page }) {
               data-testid="aside-nav-bar"
               className="flex flex-col h-screen bg-black fixed items-center p-2 space-y-12"
             >
-              <Header />
               <div className="flex-grow"></div>
               <Link href="/vote">
                 <a>
@@ -57,15 +57,17 @@ export default function Wrapper({ children, page }) {
               </Link>
               <div className="flex-grow"></div>
             </aside>
-            <div className="flex items-center col-start-2 col-end-9 mt-48">
+            <div className="flex flex-col items-center col-start-2 col-end-9">
+              <Header />
               <div className="space-y-12 p-8 md:p-12 md:pr-24">{children}</div>
             </div>
           </div>
         </div>
         {children}
       </main>
-      {!home && (
-        <div className={styles.backToHome}>
+      {!page && (
+        // <div className={styles.backToHome}>
+        <div>
           <Link href="/">
             <a>← Back to home</a>
           </Link>

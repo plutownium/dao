@@ -1,5 +1,8 @@
 import Home from "../components/Home";
 import Head from "next/head";
+
+import Wrapper from "../components/Wrapper";
+
 export default function Homepage() {
   return (
     <>
