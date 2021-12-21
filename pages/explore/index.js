@@ -6,7 +6,7 @@ import { getRandomSetOfN } from "../../getFakeData/getFakeData";
 
 export async function getStaticProps() {
   // TODO: fetch data from the real server, not the fake one.
-  let companies = getRandomSetOfN(12);
+  let companies = getRandomSetOfN(3);
   return {
     props: {
       companies,
@@ -21,6 +21,8 @@ function Explore({ companies }) {
       <VoteGrid companies={companies} />
     </Wrapper>
   );
+  // FIXME: VoteGrid is rendering twice. Commenting it out here stops it from rendering not once but both times.
+  // Therefore, the issue is in the VoteGrid component.
 }
 
 export default Explore;

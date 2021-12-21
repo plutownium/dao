@@ -1,17 +1,17 @@
 import VoteInfo from "./VoteInfo";
 
 import Image from "next/image";
-const VoteCard = (props) => {
+const VoteCard = ({ name, description, logo }) => {
   return (
     <div className={"border-solid border-2 border-white rounded-xl p-8"}>
       <h1 style={{ fontSize: "32px" }} className={"p-8"}>
-        {props.name}
+        {name}
       </h1>
-      <VoteInfo description={props.description} />
+      <VoteInfo description={description} />
       <div className="grid grid-cols-1 p-4 place-items-center">
         <div className="relative h-128">
           <Image
-            src={props.logo}
+            src={logo}
             className={"vote-image"}
             alt="Logo"
             height="100%"

@@ -1,13 +1,12 @@
 import VoteCard from "./VoteCard.js";
-import VoteInfo from "./VoteInfo";
 
-const VoteGrid = (props) => {
+const VoteGrid = ({ companies }) => {
   let company1logo = "/img/square.jpg";
-  console.log(props.companies.length);
+  console.log(companies.length);
   // console.log(props, 16);
   return (
     <div>
-      {props.companies.map((card, index) => {
+      {companies.map((card, index) => {
         console.log(card.name);
         return (
           <div key={index}>

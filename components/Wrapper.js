@@ -65,7 +65,6 @@ export default function Wrapper({ children, page }) {
             </div>
           </div>
         </div>
-        {children}
       </main>
       {!page && (
         // <div className={styles.backToHome}>
