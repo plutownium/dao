@@ -1,10 +1,15 @@
 import VoteInfo from "./VoteInfo";
 
 import Image from "next/image";
+
+import styles from "./VoteCard.module.css";
+
 const VoteCard = ({ name, description, logo }) => {
   return (
-    <div className={"border-solid border-2 border-white rounded-xl p-8"}>
-      <h1 style={{ fontSize: "32px" }} className={"p-8"}>
+    <div
+      className={"border-solid border-2 rounded-xl p-8 brown-background-text"}
+    >
+      <h1 style={{ fontSize: "32px" }} className={`p-8 brown-text`}>
         {name}
       </h1>
       <VoteInfo description={description} />
@@ -31,7 +36,7 @@ const VoteCard = ({ name, description, logo }) => {
         style={{ fontSize: "64px", width: "50%", color: "FireBrick" }}
         className={"m-4 bi bi-chevron-double-down"}
       ></i>
-      <p className="p-4">$75 / day</p>
+      <p className="p-4 brown-text">$75 / day</p>
     </div>
   );
 };

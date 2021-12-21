@@ -1,11 +1,14 @@
 .headerContainer {
-  background-color: #e4d5ba;
   width: 119px;
   height: 43px;
 }
 
 .headerContainer:active {
   /* background-color: #bd4949; */
+}
+
+.headerContainer a {
+  color: #a59984;
 }
 
 .headerContainer * {
