@@ -2,27 +2,23 @@
 
 const VoteInfo = ({ name, description }) => {
   return (
-    <div className={"bg-black"}>
-      <div>
+    <div className={"bg-black flex flex-col"}>
+      <div className="h-88">
         <h1 style={{ fontSize: "22px" }} className={`brown-text text-left`}>
           {name}
         </h1>
         <p className={"pr-4 text-sm brown-text text-left"}>{description}</p>
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between h-12">
         <div
           className={
             "flex justify-center align-center border-solid border-4 border-green-500 rounded-lg w-36"
           }
         >
-          <div className="flex justify-center content-center">
-            <div>
-              <i
-                style={{ fontSize: "26px", height: "26px" }}
-                className={"bi-piggy-bank"}
-              ></i>
-            </div>
-          </div>
+          <i
+            style={{ fontSize: "26px", height: "26px" }}
+            className={"bi-piggy-bank"}
+          ></i>
           <button className={"p-2 brown-text"}>Stake Support</button>
         </div>
         <div
