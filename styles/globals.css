@@ -31,11 +31,6 @@ a {
   display: none;
 }
 
-.vote-image {
-  max-width: 128px;
-  max-height: 128px;
-}
-
 .color-background-offwhite {
   background-color: #e5e5e5;
 }

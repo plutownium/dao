@@ -2,20 +2,38 @@
 
 const VoteInfo = ({ name, description }) => {
   return (
-    <div className={""}>
+    <div className={"bg-black"}>
       <div>
         <h1 style={{ fontSize: "22px" }} className={`brown-text text-left`}>
           {name}
         </h1>
-        <p className={"pr-2 text-sm brown-text text-left"}>{description}</p>
+        <p className={"pr-4 text-sm brown-text text-left"}>{description}</p>
       </div>
-      <div className="flex">
-        <div className={"border-solid border-4 border-green-500 rounded-lg"}>
-          <i style={{ fontSize: "32px" }} className={"bi-piggy-bank"}></i>
+      <div className="flex justify-between">
+        <div
+          className={
+            "flex justify-center align-center border-solid border-4 border-green-500 rounded-lg w-36"
+          }
+        >
+          <div className="flex justify-center content-center">
+            <div>
+              <i
+                style={{ fontSize: "26px", height: "26px" }}
+                className={"bi-piggy-bank"}
+              ></i>
+            </div>
+          </div>
           <button className={"p-2 brown-text"}>Stake Support</button>
         </div>
-        <div className={"border-solid border-4 border-blue-500 rounded-lg"}>
-          <i style={{ fontSize: "32px" }} className={"bi-people-fill"}></i>
+        <div
+          className={
+            "flex justify-center align-center border-solid border-4 border-blue-500 rounded-lg w-36"
+          }
+        >
+          <i
+            style={{ fontSize: "26px" }}
+            className={"place-items-center bi-people-fill"}
+          ></i>
           <button className={"p-2 brown-text"}>Join Project</button>
         </div>
         <div className="flex">

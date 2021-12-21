@@ -3,11 +3,10 @@
   height: 175px;
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .logoContainer {
-  max-height: 138px;
-  max-width: 138px;
-  margin: 18px 0px 0px 18px;
+  height: 138px;
+  width: 138px;
 }
