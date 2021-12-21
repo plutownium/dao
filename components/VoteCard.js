@@ -9,7 +9,9 @@ const VoteCard = ({ name, description, logo }) => {
     <div
       className={`${styles.cardContainer} border-solid border-6 rounded-xl brown-background mb-6`}
     >
-      <div className="w-100 flex justify-center content-center my-2 mr-3">
+      {/* // FIXME: inner container looks good with my-2 margin class added, but loads inconsistently
+      // due to variation in text length. */}
+      <div className="w-100 flex justify-center content-center my-1 mr-3">
         <div className="place-items-center">
           {/* // FIXME: image isn't taking 100% of width and height */}
           <div className={`${styles.logoContainer}`}>

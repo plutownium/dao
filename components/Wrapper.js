@@ -60,7 +60,7 @@ export default function Wrapper({ children, page }) {
               <div className="flex-grow"></div>
             </aside>
             <div className="flex flex-col items-center col-start-2 col-end-9">
-              <div className="space-y-12 p-8 md:p-12 md:pr-24">
+              <div className="space-y-12 waterfall-width">
                 <Header />
                 <Search />
                 {children}

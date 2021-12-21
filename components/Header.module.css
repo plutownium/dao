@@ -1,6 +1,14 @@
+.active {
+  background-color: #bd4949;
+  border-radius: 10px;
+}
+
 .headerContainer {
   width: 119px;
   height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .headerContainer:active {
@@ -22,4 +30,5 @@
 .headerMainContainer {
   width: 617px;
   height: 60px;
+  border-radius: 10px;
 }

@@ -1,12 +1,12 @@
 import Wrapper from "../../components/Wrapper";
 
-import VoteGrid from "../../components/VoteGrid";
+import SearchGrid from "../../components/SearchGrid";
 
 import { getRandomSetOfN } from "../../getFakeData/getFakeData";
 
 export async function getStaticProps() {
   // TODO: fetch data from the real server, not the fake one. Should just involve importing from "../api/index"
-  let companies = getRandomSetOfN(3);
+  let companies = getRandomSetOfN(24);
   return {
     props: {
       companies,
@@ -14,15 +14,14 @@ export async function getStaticProps() {
   };
 }
 
-function Explore({ companies }) {
-  console.log(18, companies);
+function Search({ companies }) {
   return (
     <Wrapper>
-      <VoteGrid companies={companies} />
+      <SearchGrid companies={companies} />
     </Wrapper>
   );
   // FIXME: VoteGrid is rendering twice. Commenting it out here stops it from rendering not once but both times.
   // Therefore, the issue is in the VoteGrid component.
 }
 
-export default Explore;
+export default Search;

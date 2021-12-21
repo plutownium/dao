@@ -2,8 +2,8 @@
 
 const VoteInfo = ({ name, description }) => {
   return (
-    <div className={"bg-black flex flex-col"}>
-      <div className="h-88">
+    <div className={"flex flex-col"}>
+      <div className="h-full">
         <h1 style={{ fontSize: "22px" }} className={`brown-text text-left`}>
           {name}
         </h1>
@@ -19,7 +19,7 @@ const VoteInfo = ({ name, description }) => {
             style={{ fontSize: "26px", height: "26px" }}
             className={"bi-piggy-bank"}
           ></i>
-          <button className={"p-2 brown-text"}>Stake Support</button>
+          <button className={"p-2 brown-text"}>Stake</button>
         </div>
         <div
           className={
@@ -40,11 +40,11 @@ const VoteInfo = ({ name, description }) => {
               width: "50%",
               color: "DarkSeaGreen",
             }}
-            className={"m-2 bi bi-chevron-double-up"}
+            className={"m-1 bi bi-chevron-double-up"}
           ></i>
           <i
             style={{ fontSize: "32px", width: "50%", color: "FireBrick" }}
-            className={"m-2 bi bi-chevron-double-down"}
+            className={"m-1 bi bi-chevron-double-down"}
           ></i>
         </div>
       </div>
