@@ -7,36 +7,22 @@ import styles from "./VoteCard.module.css";
 const VoteCard = ({ name, description, logo }) => {
   return (
     <div
-      className={"border-solid border-2 rounded-xl p-8 brown-background-text"}
+      className={`${styles.cardContainer} border-solid border-6 rounded-xl brown-background mb-6`}
     >
-      <h1 style={{ fontSize: "32px" }} className={`p-8 brown-text`}>
-        {name}
-      </h1>
-      <VoteInfo description={description} />
-      <div className="grid grid-cols-1 p-4 place-items-center">
-        <div className="relative h-128">
-          <Image
-            src={logo}
-            className={"vote-image"}
-            alt="Logo"
-            height="100%"
-            width="100%"
-          />
+      <div className="w-100 flex">
+        <div className="m-4 place-items-center">
+          <div className={`${styles.logoContainer}`}>
+            <Image
+              src={logo}
+              className={"vote-image"}
+              alt="Logo"
+              height="100%"
+              width="100%"
+            />
+          </div>
         </div>
+        <VoteInfo name={name} description={description} />
       </div>
-      <i
-        style={{
-          fontSize: "64px",
-          width: "50%",
-          color: "DarkSeaGreen",
-        }}
-        className={"m-4 bi bi-chevron-double-up"}
-      ></i>
-      <i
-        style={{ fontSize: "64px", width: "50%", color: "FireBrick" }}
-        className={"m-4 bi bi-chevron-double-down"}
-      ></i>
-      <p className="p-4 brown-text">$75 / day</p>
     </div>
   );
 };

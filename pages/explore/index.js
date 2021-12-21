@@ -6,7 +6,7 @@ import { getRandomSetOfN } from "../../getFakeData/getFakeData";
 
 export async function getStaticProps() {
   // TODO: fetch data from the real server, not the fake one.
-  let companies = getRandomSetOfN(3);
+  let companies = getRandomSetOfN(1);
   return {
     props: {
       companies,

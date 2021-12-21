@@ -9,13 +9,12 @@ const VoteGrid = ({ companies }) => {
       {companies.map((card, index) => {
         console.log(card.name);
         return (
-          <div key={index}>
-            <VoteCard
-              name={card.name}
-              description={card.description}
-              logo={company1logo}
-            />
-          </div>
+          <VoteCard
+            key={index}
+            name={card.name}
+            description={card.description}
+            logo={company1logo}
+          />
         );
       })}
     </div>

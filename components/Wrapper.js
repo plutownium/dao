@@ -1,10 +1,8 @@
 import Head from "next/head";
-
-import Header from "./Header";
-
 import Link from "next/link";
 
-import styles from "./Wrapper.module.css";
+import Header from "./Header";
+import Search from "./Search";
 
 export default function Wrapper({ children, page }) {
   return (
@@ -30,7 +28,9 @@ export default function Wrapper({ children, page }) {
           <div className="grid grid-cols-8 gap-4">
             <aside
               data-testid="aside-nav-bar"
-              className={`${styles.bgColorBrown} m-3 flex flex-col h-screen fixed items-center p-2 space-y-12`}
+              className={
+                "brown-background m-3 flex flex-col h-screen fixed items-center p-2 space-y-12"
+              }
             >
               <div className="flex-grow"></div>
               <Link href="/vote">
@@ -62,6 +62,7 @@ export default function Wrapper({ children, page }) {
             <div className="flex flex-col items-center col-start-2 col-end-9">
               <div className="space-y-12 p-8 md:p-12 md:pr-24">
                 <Header />
+                <Search />
                 {children}
               </div>
             </div>
