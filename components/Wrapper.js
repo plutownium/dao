@@ -4,6 +4,8 @@ import Header from "./Header";
 
 import Link from "next/link";
 
+import styles from "./Wrapper.module.css";
+
 export default function Wrapper({ children, page }) {
   return (
     // <div className={styles.container}>
@@ -28,7 +30,7 @@ export default function Wrapper({ children, page }) {
           <div className="grid grid-cols-8 gap-4">
             <aside
               data-testid="aside-nav-bar"
-              className="flex flex-col h-screen bg-black fixed items-center p-2 space-y-12"
+              className={`${styles.bgColorBrown} m-3 flex flex-col h-screen fixed items-center p-2 space-y-12`}
             >
               <div className="flex-grow"></div>
               <Link href="/vote">
