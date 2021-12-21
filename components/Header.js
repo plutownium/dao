@@ -4,7 +4,7 @@ import styles from "./Header.module.css";
 
 const Header = () => {
   return (
-    <div className="pt-5 w-full flex justify-center">
+    <div className={`pt-5 ${styles.headerMainContainer}`}>
       <div className="w-full flex justify-evenly">
         <div className={styles.headerContainer}>
           <Link href="/explore">

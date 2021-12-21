@@ -1,6 +1,11 @@
 .headerContainer {
   background-color: #e4d5ba;
   width: 119px;
+  height: 43px;
+}
+
+.headerContainer:active {
+  /* background-color: #bd4949; */
 }
 
 .headerContainer * {
@@ -9,4 +14,9 @@
 
 .headerContainer::selection {
   background-color: #bd4949;
+}
+
+.headerMainContainer {
+  width: 617px;
+  height: 60px;
 }

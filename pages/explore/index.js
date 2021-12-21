@@ -1,9 +1,24 @@
 import Wrapper from "../../components/Wrapper";
 
-function Explore(props) {
+import VoteGrid from "../../components/VoteGrid";
+
+import { getRandomSetOfN } from "../../getFakeData/getFakeData";
+
+export async function getStaticProps() {
+  // TODO: fetch data from the real server, not the fake one.
+  let companies = getRandomSetOfN(12);
+  return {
+    props: {
+      companies,
+    },
+  };
+}
+
+function Explore({ companies }) {
+  console.log(18, companies);
   return (
     <Wrapper>
-      <div>foo</div>
+      <VoteGrid companies={companies} />
     </Wrapper>
   );
 }

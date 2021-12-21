@@ -1,3 +1,5 @@
+// TODO: put vote Info inside of vote Card
+
 const VoteInfo = (props) => {
   return (
     <div className={"col-span-1 p-8"}>

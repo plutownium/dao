@@ -1,3 +1,5 @@
+import VoteInfo from "./VoteInfo";
+
 import Image from "next/image";
 const VoteCard = (props) => {
   return (
@@ -5,6 +7,7 @@ const VoteCard = (props) => {
       <h1 style={{ fontSize: "32px" }} className={"p-8"}>
         {props.name}
       </h1>
+      <VoteInfo description={props.description} />
       <div className="grid grid-cols-1 p-4 place-items-center">
         <div className="relative h-128">
           <Image
